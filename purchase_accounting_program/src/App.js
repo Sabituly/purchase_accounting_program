@@ -1,5 +1,5 @@
-import CostItem from "./companents/CostItem";
-import Costs from "./companents/Costs";
+import CostItem from "./companents/Costs/CostItem";
+import Costs from "./companents/Costs/Costs";
 
 function App() {
 
