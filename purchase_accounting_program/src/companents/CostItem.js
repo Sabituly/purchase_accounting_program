@@ -7,10 +7,10 @@ function CostItem() {
 
   return (
     <div className='cost-item'>
-      <div>Март 2021 12</div>
+      <div>{costDate.toISOString()}</div>
       <div className='cost-item__description'>
         <h2>{costDescription}</h2>
-        <div className='cost-item__price'>{costAmount}</div>
+        <div className='cost-item__price'>${costAmount}</div>
       </div>
     </div>
   );
