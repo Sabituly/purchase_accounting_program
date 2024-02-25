@@ -1,4 +1,5 @@
 import CostItem from "./companents/CostItem";
+import Costs from "./companents/Costs";
 
 function App() {
 
@@ -24,9 +25,12 @@ function App() {
   return (
     <div>
       <h1>Начнём изучение Реакт!!!</h1>
-      <CostItem date={costs[0].date} description={costs[0].description} amount = {costs[0].amount}/>
-      <CostItem date={costs[1].date} description={costs[1].description} amount = {costs[1].amount}/>
-      <CostItem date={costs[2].date} description={costs[2].description} amount = {costs[2].amount}/>
+      {/*<CostItem date={costs[0].date} description={costs[0].description} amount = {costs[0].amount}/>*/}
+      {/*<CostItem date={costs[1].date} description={costs[1].description} amount = {costs[1].amount}/>*/}
+      {/*<CostItem date={costs[2].date} description={costs[2].description} amount = {costs[2].amount}/>*/}
+
+        <Costs costs={costs}/>
+        {/* TODO В данном случаи costs это props  и одновременно это и имя переменной costs которую мы сами указали в Costs*/}
     </div>
   );
 }
