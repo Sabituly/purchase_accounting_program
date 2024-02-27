@@ -1,6 +1,7 @@
 import "./CostForm.css";
 import { useState } from "react";
-const CostForm = () => {
+const CostForm = (props) => {
+
   // const [name, setName] = useState('');
   // const [amount, setAmount] = useState('');
   // const [date, setDate] = useState('');
@@ -54,7 +55,7 @@ const CostForm = () => {
        date: new Date(userInput.date)
     };
 
-      console.log(costData);
+      props.onSaveCostData(costData); // здесь я передаю через пропсы на верх что надо вызвать функцию
 
       setUserInput((previousState) => {
           return { ...previousState, name: '', amount: '', date: '' };
