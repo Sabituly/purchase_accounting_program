@@ -1,9 +1,14 @@
 import CostForm from "./CostForm";
 import "./NewCost.css";
 const NewCost = () => {
+
+    const saveCostDataHandler = (inputCostData) => {
+
+        console.log(inputCostData)
+    }
   return (
       <div className={"new-cost"}>
-        <CostForm/>
+        <CostForm onSaveCostData ={saveCostDataHandler}/>
       </div>
   );
 };

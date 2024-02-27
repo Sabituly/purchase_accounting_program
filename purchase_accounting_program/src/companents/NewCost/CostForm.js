@@ -55,6 +55,10 @@ const CostForm = () => {
     };
 
       console.log(costData);
+
+      setUserInput((previousState) => {
+          return { ...previousState, name: '', amount: '', date: '' };
+      });
   };
 
   return (
@@ -62,7 +66,7 @@ const CostForm = () => {
       <div className="new-cost__controls">
         <div className="new-cost__control">
           <label>Название</label>
-          <input type={"text"} onChange={nameChangeHandler} />
+          <input type={"text"} value={userInput.name} onChange={nameChangeHandler} />
         </div>
         <div className="new-cost__control">
           <label>Сумма</label>
@@ -70,6 +74,7 @@ const CostForm = () => {
             type={"number"}
             min={"0.01"}
             step={"0.01"}
+            value={userInput.amount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -79,6 +84,7 @@ const CostForm = () => {
             type={"date"}
             min={"2024-01-01"}
             step={"2027-12-31"}
+            value={userInput.date}
             onChange={dateChangeHandler}
           />
         </div>
