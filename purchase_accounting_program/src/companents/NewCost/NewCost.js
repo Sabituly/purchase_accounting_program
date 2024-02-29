@@ -10,7 +10,7 @@ const NewCost = (propsNewCost) => {
         }
         console.log(costData);
 
-        propsNewCost.onAddcost(costData);
+        propsNewCost.onAddcost(costData); // передаю на вверх данные
     }
 
 
