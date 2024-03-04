@@ -1,33 +1,36 @@
-import CostItem from "./companents/Costs/CostItem";
+import React, {useState} from "react";
 import Costs from "./companents/Costs/Costs";
 import NewCost from "./companents/NewCost/NewCost";
+
+
+const INITIAL_COSTS = [
+  {
+    id: 'c1',
+    date: new Date(2024, 1, 25),
+    description: "МакбукПро2024",
+    amount: 999.99,
+  },
+  {
+    id: 'c2',
+    date: new Date(2024, 2, 23),
+    description: "Iphone 15 ProMax",
+    amount: 999.99,
+  },
+  {
+    id: 'c3',
+    date: new Date(2024, 2, 20),
+    description: "Imac2020",
+    amount: 1999.99,
+  },
+];
+
 function App() {
-  const costs = [
-    {
-      id: 'c1',
-      date: new Date(2024, 1, 25),
-      description: "МакбукПро2024",
-      amount: 999.99,
-    },
-    {
-      id: 'c2',
-      date: new Date(2024, 2, 23),
-      description: "Iphone 15 ProMax",
-      amount: 999.99,
-    },
-    {
-      id: 'c3',
-      date: new Date(2024, 2, 20),
-      description: "Imac2020",
-      amount: 1999.99,
-    },
-  ];
 
+const [costs, setCosts] = useState(INITIAL_COSTS);
   const addCostHandler = (cost) => {
-    //[...costs, CostData];
-
-    console.log(cost);
-    console.log("this is App component");
+    setCosts(prevState => {
+      return [cost, ...prevState]
+    });
   }
   return (
     <div>

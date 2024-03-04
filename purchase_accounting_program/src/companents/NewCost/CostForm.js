@@ -50,7 +50,7 @@ const CostForm = (props) => {
     e.preventDefault(); // всттроенный в js метод
 
     const costData = {
-       name: userInput.name,
+       description: userInput.name,
        amount: userInput.amount,
        date: new Date(userInput.date)
     };
