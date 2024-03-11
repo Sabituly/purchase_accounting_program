@@ -25,3 +25,7 @@
     background-color: #2a5c84b2;
     border-color: #2a5c84b2;
 }
+
+.hidden {
+    display: none;
+}
