@@ -7,7 +7,7 @@ import CostList from "./CostList";
 
 const Costs = (props) => {
 
-    const [selectedYear, setSelectedYear] = useState('2022');
+    const [selectedYear, setSelectedYear] = useState('2024');
     const getDataFromChild = (data) => {
         setSelectedYear(data);
     }
