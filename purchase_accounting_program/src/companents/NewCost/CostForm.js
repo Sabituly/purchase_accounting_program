@@ -87,7 +87,7 @@ const CostForm = (props) => {
           <label>Дата</label>
           <input
             type={"date"}
-            min={"2024-01-01"}
+            min={"2020-01-01"}
             step={"2027-12-31"}
             value={userInput.date}
             onChange={dateChangeHandler}
